@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Alias_genarator
+﻿namespace Alias_genarator
 {
     using System;
     using System.Collections.Generic;
@@ -23,7 +17,6 @@ namespace Alias_genarator
 
         static void Main(string[] args)
         {
-
             string navn = "";
             char[] schar = { ' ' };
             List<Alias> AliasList = new List<Alias>();
@@ -35,9 +28,6 @@ namespace Alias_genarator
                 navn = StortOgSmaat(Console.ReadLine().Trim()); //variablen navn = indtastning + metoden StortOgSmåt plus trim(fjern mellemrum)
                 if (navn != "")
                 {
-
-
-
                     string[] delNavn = navn.Split(schar, StringSplitOptions.RemoveEmptyEntries); // opretter en ny string array "delnavn" og gemmer det indtastede navn, og splitter det ved alle mellemrum (schar)
                     string totalNavn = "";
                     foreach (string xnavn in delNavn)// for hvert navn gemt i vores array, kør metoden StortOgSmåt og gem navnet i totalNavn
@@ -56,7 +46,6 @@ namespace Alias_genarator
                     A1.AliNr = 0001;// Hvor er mine fucking nuller!?
                     string alinavn = A1.AliNavn;
 
-
                     foreach (Alias DelAlias in AliasList)
                     {
 
@@ -68,7 +57,6 @@ namespace Alias_genarator
                     }
                     AliasList.Add(A1);
                     navneliste.Add(Efternavn + ", " + Fornavn + ", " + A1.AliNavn + A1.AliNr);
-
                 }
             } while (navn != "");// kør min "do" imens variablen navn ikke er tom
             navneliste.Sort();//sorter navneliste, når den udskrives vil den vises i alfabetisk rækkefølge
